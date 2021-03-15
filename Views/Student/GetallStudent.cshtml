@@ -1,0 +1,53 @@
+﻿ @model IEnumerable<EyeDoctor.Models.StudentModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetallStudent</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Studenet_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student_Email)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Studenet_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student_Email)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "GetStudent", new { id=item.Studenet_Id  }) 
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
