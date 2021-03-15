@@ -21,6 +21,35 @@ namespace EyeDoctor.Controllers
             return View(student);
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public ActionResult GetStudentAddress(int id)
         {
             var student = Students().FirstOrDefault(x => x.Studenet_Id == id);
@@ -44,6 +73,12 @@ namespace EyeDoctor.Controllers
                },
 
                new StudentModel()
+               {
+                   Studenet_Id=103,
+                   Student_Name="ram",
+                   Student_Email="ram@gmail.com"
+               },
+                new StudentModel()
                {
                    Studenet_Id=103,
                    Student_Name="ram",
