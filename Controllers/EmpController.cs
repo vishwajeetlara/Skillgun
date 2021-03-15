@@ -9,7 +9,7 @@ namespace EyeDoctor.Controllers
     public class EmpController : Controller
     {
         // GET: Emp
-        public ActionResult Index()
+        public ActionResult GetAllEmployee()
         {
             return View();
         }
